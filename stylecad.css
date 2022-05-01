@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .form-header {
@@ -77,7 +77,7 @@ body {
 .form-header h1::after {
     content: '';
     display: block;
-    width: 5rem;
+    width: 3rem;
     height: 0.3rem;
     background-color: #6c63ff;
     margin: 0 auto;
@@ -124,28 +124,6 @@ body {
 
 .input-box input::placeholder {
     color: #000000be;
-}
-
-.gender-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0.62rem;
-    padding: 0 .5rem;
-}
-
-.gender-input {
-    display: flex;
-    align-items: center;
-}
-
-.gender-input input {
-    margin-right: 0.35rem;
-}
-
-.gender-input label {
-    font-size: 0.81rem;
-    font-weight: 600;
-    color: #000000c0;
 }
 
 .continue-button button {
