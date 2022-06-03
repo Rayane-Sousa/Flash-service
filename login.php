@@ -9,7 +9,7 @@ $camposenha = $_POST["senha"];
 require 'conexao.php';
 
 //Cria o SQL (consulte tudo na tabela usuarios com o email digitado no form)
-$sql = "SELECT * FROM BancoCliente WHERE email='$campoemail'";
+$sql = "SELECT * FROM usuarios where email='$campoemail'";
 
 //Executa o SQL
 $result = $conn->query($sql);
@@ -19,14 +19,18 @@ $result = $conn->query($sql);
  
 	//Se a consulta tiver resultados
 	if ($result->num_rows > 0) {
-		
-			if($camposenha == $row["Senha"]){
+
+			//O EasyPHP não tem password_hash, por isso deixei as duas opções
+			//$verificado = password_verify($camposenha, $row["Senha"]);
+			//if($verificado){			
+			if($camposenha == $row["senha"]){
 				$_SESSION['nome'] = $row["Nome"];
+				$_SESSION['acesso'] = $row["Acesso"];
 				header('Location: principal.php');
 				exit;
 			}else{
 			  header( "refresh:5;url=index.html" );
-				echo 'Senha Inválida';  
+				echo "<br>" . 'Senha Errada';  
 				exit;  
 			}
 	//Se a consulta não tiver resultados  			
