@@ -1,8 +1,8 @@
 <?php
 // Parâmetros para criar a conexão
 $servername = "localhost";
-$username = "id18553025_bancocliente1";
-$password = "Luisapique-43253";
+$username = "root";
+$password = "";
 $dbname = "id18553025_flashservice";
 
 // Criando a conexão

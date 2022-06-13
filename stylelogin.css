@@ -126,7 +126,7 @@ body {
     color: #000000be;
 }
 
-.continue-button button {
+.continue-button input{
     width: 100%;
     margin-top: 2.5rem;
     border: none;
@@ -136,13 +136,12 @@ body {
     cursor: pointer;
 }
 
-.continue-button button:hover {
+.continue-button input:hover {
     background-color: #4f4b92f1;
 }
 
-.continue-button button a {
+.continue-button input a {
     text-decoration: none;
-    font-size: 0.93rem;
     font-weight: 500;
     color: #fff;
 }

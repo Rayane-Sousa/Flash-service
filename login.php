@@ -9,7 +9,7 @@ $camposenha = $_POST["senha"];
 require 'conexao.php';
 
 //Cria o SQL (consulte tudo na tabela usuarios com o email digitado no form)
-$sql = "SELECT * FROM usuarios where email='$campoemail'";
+$sql = "SELECT * FROM usuario where email='$campoemail'";
 
 //Executa o SQL
 $result = $conn->query($sql);
@@ -24,8 +24,8 @@ $result = $conn->query($sql);
 			//$verificado = password_verify($camposenha, $row["Senha"]);
 			//if($verificado){			
 			if($camposenha == $row["senha"]){
-				$_SESSION['nome'] = $row["Nome"];
-				$_SESSION['acesso'] = $row["Acesso"];
+				$_SESSION['nome'] = $row["nome"];
+				$_SESSION['acesso'] = $row["acesso"];
 				header('Location: principal.php');
 				exit;
 			}else{
